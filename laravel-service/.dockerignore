@@ -1,0 +1,65 @@
+# Git
+.git
+.gitignore
+
+# Environment files
+.env
+.env.example
+.env.local
+.env.development
+.env.production
+
+# Dependency directories
+vendor/
+node_modules/
+
+# Laravel specific directories
+bootstrap/cache/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+storage/logs/
+
+# Compiled files and caches
+*.log
+*.cache
+
+# Composer files
+composer.lock
+
+# NPM/Yarn files
+package-lock.json
+yarn.lock
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Testing
+tests/
+phpunit.xml
+
+# Frontend build files
+public/hot
+public/storage
+public/mix-manifest.json
+
+# Misc
+.phpunit.result.cache

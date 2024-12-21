@@ -1,0 +1,18 @@
+2024-12-17 15:50:00.225 [info] 
+
+
+
+
+2024-12-17 15:50:00.324 [info] Extension host agent started.
+2024-12-17 15:50:01.607 [info] [127.0.0.1][4dc695fd][ManagementConnection] New connection established.
+2024-12-17 15:50:01.620 [debug] No uninstalled extensions found.
+2024-12-17 15:50:01.665 [info] Log level changed to info
+2024-12-17 15:50:02.167 [info] [127.0.0.1][db6c585a][ExtensionHostConnection] New connection established.
+2024-12-17 15:50:02.210 [info] [127.0.0.1][db6c585a][ExtensionHostConnection] <433> Launched Extension Host Process.
+2024-12-17 15:50:02.271 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment: Unexpected exit code from spawned shell (code 1, signal null)
+2024-12-17 15:50:26.281 [info] [127.0.0.1][4dc695fd][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-12-17 15:50:26.554 [info] [127.0.0.1][db6c585a][ExtensionHostConnection] <433> Extension Host Process exited with code: 0, signal: null.
+2024-12-17 15:50:49.149 [info] [127.0.0.1][2e5b8a7c][ManagementConnection] New connection established.
+2024-12-17 15:50:49.325 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment: Unexpected exit code from spawned shell (code 1, signal null)
+2024-12-17 15:50:49.638 [info] [127.0.0.1][2063fa3c][ExtensionHostConnection] New connection established.
+2024-12-17 15:50:50.046 [info] [127.0.0.1][2063fa3c][ExtensionHostConnection] <1189> Launched Extension Host Process.

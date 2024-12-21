@@ -1,0 +1,65 @@
+version: '3.8'
+services:
+  # Laravel Service
+  laravel-service:
+    build: 
+      context: ./laravel-service  
+      dockerfile: Dockerfile
+    container_name: laravel-microservice
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./laravel-service:/var/www/html
+    networks:
+      - microservices-network
+    environment:
+      - APP_ENV=development
+      - APP_DEBUG=true
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=laravel_db
+      - DB_USERNAME=laravel_user
+      - DB_PASSWORD=laravel_password
+    depends_on:
+      - mysql
+
+  # MySQL Database for Laravel
+  mysql:
+    image: mysql:8.0
+    container_name: laravel-mysql-new
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: laravel_db
+      MYSQL_USER: laravel_user
+      MYSQL_PASSWORD: laravel_password
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - microservices-network
+
+  # Django Service (Commented Out - To Be Added)
+  # django-service:
+  #   build: 
+  #     context: ./django-service
+  #     dockerfile: Dockerfile
+  #   container_name: django-microservice
+  #   ports:
+  #     - "8001:8000"
+  #   volumes:
+  #     - ./django-service/src:/app
+  #   networks:
+  #     - microservices-network
+  #   environment:
+  #     - DJANGO_SETTINGS_MODULE=src.settings
+  #     - DEBUG=1
+
+networks:
+  microservices-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local

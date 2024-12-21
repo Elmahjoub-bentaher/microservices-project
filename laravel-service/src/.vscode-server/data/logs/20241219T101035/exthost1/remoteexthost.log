@@ -1,0 +1,13 @@
+2024-12-19 10:10:51.964 [info] Extension host with pid 455 started
+2024-12-19 10:10:52.053 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-12-19 10:10:52.329 [info] Lock '/var/www/.vscode-server/data/User/workspaceStorage/29d95338eb788a5ba482aad98fd35813/vscode.lock': Lock acquired.
+2024-12-19 10:10:52.376 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-12-19 10:10:52.477 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2024-12-19 10:10:52.797 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-12-19 10:10:52.798 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-12-19 10:10:53.902 [info] Eager extensions activated
+2024-12-19 10:10:53.904 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-12-19 10:10:53.907 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-12-19 10:11:00.866 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2024-12-19 10:11:00.867 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2024-12-19 10:11:00.869 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
