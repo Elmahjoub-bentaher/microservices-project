@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer un Utilisateur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        form {
+            display: inline-block;
+        }
+        button {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c82333;
+        }
+        a {
+            display: inline-block;
+            margin-left: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Supprimer l'Utilisateur</h1>
+    <p>Êtes-vous sûr de vouloir supprimer l'utilisateur <strong>{{ user.username }}</strong> ?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmer la suppression</button>
+    </form>
+    <a href="{% url 'user_list' %}">Annuler</a>
+</body>
+</html>

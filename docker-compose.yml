@@ -1,6 +1,5 @@
 version: '3.8'
 services:
-  # Laravel Service
   laravel-service:
     build: 
       context: ./laravel-service  
@@ -23,8 +22,21 @@ services:
       - DB_PASSWORD=laravel_password
     depends_on:
       - mysql
-
-  # MySQL Database for Laravel
+  django-service:
+    build: 
+      context: ./django_service
+      dockerfile: Dockerfile
+    container_name: django-microservice
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./django_service:/app
+    networks:
+      - microservices-network
+    environment:
+      - DJANGO_SETTINGS_MODULE=django_service.settings
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      - DEBUG=1
   mysql:
     image: mysql:8.0
     container_name: laravel-mysql-new
@@ -39,22 +51,6 @@ services:
       - mysql-data:/var/lib/mysql
     networks:
       - microservices-network
-
-  # Django Service (Commented Out - To Be Added)
-  # django-service:
-  #   build: 
-  #     context: ./django-service
-  #     dockerfile: Dockerfile
-  #   container_name: django-microservice
-  #   ports:
-  #     - "8001:8000"
-  #   volumes:
-  #     - ./django-service/src:/app
-  #   networks:
-  #     - microservices-network
-  #   environment:
-  #     - DJANGO_SETTINGS_MODULE=src.settings
-  #     - DEBUG=1
 
 networks:
   microservices-network:
