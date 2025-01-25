@@ -5,8 +5,8 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 # URL de base de l'API Laravel
-# LARAVEL_API_URL = "http://laravel-service:8000"
-LARAVEL_API_URL = "http://localhost:8000"
+LARAVEL_API_URL = "http://laravel-service:8000"
+# LARAVEL_API_URL = "http://localhost:8000"
 
 # Initialiser le service
 laravel_service = LaravelUserService(LARAVEL_API_URL)
